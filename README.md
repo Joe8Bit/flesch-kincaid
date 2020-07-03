@@ -1,13 +1,13 @@
 # flesch-kincaid
 
-Flesch-Kincaid readability & grade level calculations in JavaScript.
+Flesch-Kincaid readability & grade level calculations in for NodeJS. *Very* lightly modified from [daveross/flesch-kincaid](https://github.com/daveross/flesch-kincaidhttps://github.com/daveross/flesch-kincaid).
 
 ## Installation
 
 Install through npm:
 
 ```
-npm install daveross/flesch-kincaid
+npm install joe8bit/flesch-kincaid
 ```
 
 ## License
@@ -23,16 +23,8 @@ As a derivative work, this library inherits [Perl's license terms](http://dev.pe
 
 ## Usage
 
-`flesch-kincaid.js` is a CommonJS module. It's intended to be bundled with the rest of your code using a tool like Webpack or Require.js.
-
-In the event you're not using such a tool, you can emulate loading the library in a browser with code such as this:
-
-```
-<script>var exports = [];</script>
-<script src="node_modules/flesch-kincaid/flesch-kincaid.js"></script>
-<script>
-    var FleschKincaid = exports;
-</script>
+```javascript
+const fk = require('joe8bit/flesch-kincaid');
 ```
 
 ### Rate
@@ -43,7 +35,7 @@ section on Flesch Reading Ease](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kin
 
 ```
 var str = "The quick brown fox jumped over the lazy dogs";
-console.log( FleschKincaid.rate( str ) ); // 84.90000000000003
+console.log( fk.rate( str ) ); // 84.90000000000003
 ```
 
 ### Grade
@@ -53,5 +45,5 @@ needed to understand a text. Lower grade levels correspond with easier reads, hi
 
 ```
 var str = "The quick brown fox jumped over the lazy dogs";
-console.log( FleschKincaid.grade( str ) ); // 3.653333333333336
+console.log( fk.grade( str ) ); // 3.653333333333336
 ```
