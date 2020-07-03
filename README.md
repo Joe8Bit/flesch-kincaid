@@ -24,7 +24,7 @@ As a derivative work, this library inherits [Perl's license terms](http://dev.pe
 ## Usage
 
 ```javascript
-const fk = require('joe8bit/flesch-kincaid');
+const fk = require('flesch-kincaid');
 ```
 
 ### Rate
